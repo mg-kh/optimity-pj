@@ -11000,7 +11000,7 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: center;
   width: 15%;
-  color: #fff;
+  color: #dc3545;
   text-align: center;
   opacity: 0.5;
   transition: opacity 0.15s ease;
@@ -11017,7 +11017,7 @@ input[type=button].btn-block {
 .carousel-control-prev:focus,
 .carousel-control-next:hover,
 .carousel-control-next:focus {
-  color: #fff;
+  color: #dc3545;
   text-decoration: none;
   outline: 0;
   opacity: 0.9;
@@ -11040,11 +11040,11 @@ input[type=button].btn-block {
 }
 
 .carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
 }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e");
 }
 
 .carousel-indicators {
@@ -11511,10 +11511,52 @@ body {
 }
 
 .contact__us__banner__container {
-  height: 300px;
+  height: 200px;
+  margin-top: 66px;
   background-image: url(/images/bgart.jpg?216df3493a75049e2efcf8fc65601bab);
   background-position: -200px 14px;
   background-repeat: no-repeat;
+}
+
+.contact__form__container label {
+  font-weight: bold;
+}
+
+.contact__form__container input.form-control {
+  height: 45px;
+}
+
+.contact__form__container .form-check label {
+  font-weight: normal;
+}
+
+.contact__form__container .breadcrumb,
+.contact__form__container p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.contact__form__container .breadcrumb li.active a {
+  color: #dc3545 !important;
+}
+
+.contact__form__container .breadcrumb li a {
+  color: gray !important;
+  text-decoration: none;
+}
+
+.contact__form__container .breadcrumb li a:hover {
+  color: #cfcfcf !important;
+}
+
+.contact__form__container .contact__info p {
+  margin: 0 !important;
+}
+
+.contact__form__container h1,
+.contact__form__container h3 {
+  color: #dc3545 !important;
+  font-family: "Exo 2", sans-serif;
 }
 
 .sub__menu__container a {
