@@ -1,0 +1,67 @@
+// For small devices
+@include media-breakpoint-down(sm) {
+     $h1_font_size: 30px;
+     $p_font_size: 16px;
+     $svg_container_width: 45px;
+     $logo_container_width: 47px;
+
+     .hero__slider__container {
+          h1 {
+               font-size: $h1_font_size;
+          }
+
+          p {
+               font-size: $p_font_size;
+          }
+
+          img {
+               width: 100%;
+          }
+     }
+
+     .sub__menu__container {
+          .svg__container {
+               width: $svg_container_width;
+               margin: 0 auto;
+          }
+     }
+
+     .nav__bar__container {
+          .container {
+               max-width: 800px;
+               padding: 0px 0px;
+          }
+
+          .navbar-brand {
+               margin-left: 1rem;
+          }
+
+          .navbar-toggler {
+               margin-right: 1rem;
+          }
+
+          .collapse {
+               height: 100vh;
+               overflow-y: auto;
+               padding-bottom: 80px !important;
+          }
+
+          ul {
+               li {
+                    a {
+                         padding-left: 10px !important;
+                    }
+               }
+          }
+
+          .dropdown-menu {
+               min-width: 300px !important;
+          }
+
+     }
+
+     .logo__container {
+          width: $logo_container_width !important;
+     }
+
+}
