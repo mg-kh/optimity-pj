@@ -11511,10 +11511,52 @@ body {
 }
 
 .contact__us__banner__container {
-  height: 300px;
+  height: 200px;
+  margin-top: 66px;
   background-image: url(/images/bgart.jpg?216df3493a75049e2efcf8fc65601bab);
   background-position: -200px 14px;
   background-repeat: no-repeat;
+}
+
+.contact__form__container label {
+  font-weight: bold;
+}
+
+.contact__form__container input.form-control {
+  height: 45px;
+}
+
+.contact__form__container .form-check label {
+  font-weight: normal;
+}
+
+.contact__form__container .breadcrumb,
+.contact__form__container p {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.contact__form__container .breadcrumb li.active a {
+  color: #fa008f !important;
+}
+
+.contact__form__container .breadcrumb li a {
+  color: gray !important;
+  text-decoration: none;
+}
+
+.contact__form__container .breadcrumb li a:hover {
+  color: #cfcfcf !important;
+}
+
+.contact__form__container .contact__info p {
+  margin: 0 !important;
+}
+
+.contact__form__container h1,
+.contact__form__container h3 {
+  color: #fa008f !important;
+  font-family: "Exo 2", sans-serif;
 }
 
 .sub__menu__container a {

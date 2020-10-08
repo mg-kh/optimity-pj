@@ -102,10 +102,65 @@
 }
 
 .contact__us__banner__container {
-     height: 300px;
+     height: 200px;
+     margin-top: 66px;
      background-image: url('../images/bgart.jpg');
      background-position: -200px 14px;
      background-repeat: no-repeat;
+
+}
+
+.contact__form__container {
+     label {
+          font-weight: bold;
+     }
+
+     input.form-control {
+          height: 45px;
+     }
+
+     .form-check {
+          label {
+               font-weight: normal;
+          }
+     }
+
+     .breadcrumb,
+     p {
+          font-size: 18px;
+          text-align: justify;
+     }
+
+     .breadcrumb {
+          li {
+               &.active a {
+                    color: $red !important;
+               }
+
+               a {
+                    color: gray !important;
+                    text-decoration: none;
+
+                    &:hover {
+                         color: rgb(207, 207, 207) !important;
+                    }
+               }
+          }
+
+     }
+
+     .contact__info {
+          p {
+               margin: 0 !important;
+          }
+     }
+
+     h1,
+     h3 {
+          color: $red !important;
+          font-family: 'Exo 2',
+               sans-serif;
+     }
 }
 
 

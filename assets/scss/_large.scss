@@ -1,4 +1,6 @@
 // For large devices
+$nav_height_list: 80px;
+
 @media (min-width: 992px) {
      .col-lg-five {
           @include make-col-ready(30px);
@@ -13,7 +15,7 @@
 
 
           ul>li {
-               height: 80px;
+               height: $nav_height_list;
 
                a {
                     padding: 0px 16px !important;
@@ -27,7 +29,7 @@
           .dropdown-menu {
                a {
                     height: 100%;
-                    line-height: 40px;
+                    line-height: $nav_height_list/2;
                }
           }
 
