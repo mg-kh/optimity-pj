@@ -11471,6 +11471,7 @@ body {
 .nav__bar__container nav ul li .dropdown-menu a {
   color: white;
   text-decoration: none;
+  height: 100%;
   padding: 0px 3px !important;
 }
 
@@ -11553,6 +11554,10 @@ body {
   margin: 0 !important;
 }
 
+.contact__form__container .contact__info p a:hover {
+  color: #adb5bd !important;
+}
+
 .contact__form__container h1,
 .contact__form__container h3 {
   color: #fa008f !important;
@@ -11621,7 +11626,19 @@ footer .property__container .badge__container:nth-child(3) {
   margin: 0px 10px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 576px) {
+  .nav__bar__container .container {
+    max-width: 600px;
+  }
+
+  .nav__bar__container nav ul li .dropdown-menu {
+    min-width: 300px !important;
+  }
+
+  .sub__menu__container h4 {
+    font-size: 15px !important;
+  }
+
   .hero__slider__container h1 {
     font-size: 30px;
   }
@@ -11629,54 +11646,9 @@ footer .property__container .badge__container:nth-child(3) {
   .hero__slider__container p {
     font-size: 16px;
   }
-
-  .hero__slider__container img {
-    width: 100%;
-  }
-
-  .sub__menu__container .svg__container {
-    width: 45px;
-    margin: 0 auto;
-  }
-
-  .nav__bar__container .container {
-    max-width: 800px;
-    padding: 0px 0px;
-  }
-
-  .nav__bar__container .navbar-brand {
-    margin-left: 1rem;
-  }
-
-  .nav__bar__container .navbar-toggler {
-    margin-right: 1rem;
-  }
-
-  .nav__bar__container .collapse {
-    height: 100vh;
-    overflow-y: auto;
-    padding-bottom: 80px !important;
-  }
-
-  .nav__bar__container ul li a {
-    padding-left: 10px !important;
-  }
-
-  .nav__bar__container .dropdown-menu {
-    min-width: 300px !important;
-  }
-
-  .logo__container {
-    width: 47px !important;
-  }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .col-md-five {
-    min-width: 20%;
-    flex: 0 0 20%;
-  }
-
+@media (max-width: 992px) {
   .nav__bar__container .container {
     max-width: 1000px;
     padding: 0px 0px;
@@ -11697,7 +11669,13 @@ footer .property__container .badge__container:nth-child(3) {
   }
 
   .nav__bar__container ul li a {
-    padding-left: 10px !important;
+    padding-left: 1rem !important;
+  }
+
+  .nav__bar__container ul li a::after {
+    position: absolute;
+    top: 19px;
+    right: 36px;
   }
 
   .hero__slider__container h1 {
@@ -11735,6 +11713,13 @@ footer .property__container .badge__container:nth-child(3) {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .col-md-five {
+    min-width: 20%;
+    flex: 0 0 20%;
+  }
+}
+
 @media (min-width: 992px) {
   .col-lg-five {
     position: relative;
@@ -11745,24 +11730,18 @@ footer .property__container .badge__container:nth-child(3) {
     max-width: 20%;
   }
 
-  .nav__bar__container .navbar-brand {
-    height: 70px;
-  }
-
-  .nav__bar__container ul > li {
+  .nav__bar__container ul li {
     height: 80px;
   }
 
-  .nav__bar__container ul > li a {
+  .nav__bar__container ul li a {
     padding: 0px 16px !important;
-    display: inline-block;
     width: 100%;
     height: 100%;
     line-height: 80px;
   }
 
   .nav__bar__container .dropdown-menu a {
-    height: 100%;
     line-height: 40px;
   }
 

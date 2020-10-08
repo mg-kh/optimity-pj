@@ -55,6 +55,7 @@
                          a {
                               color: white;
                               text-decoration: none;
+                              height: 100%;
                               padding: 0px 3px !important;
 
                               &:hover {
@@ -152,6 +153,10 @@
      .contact__info {
           p {
                margin: 0 !important;
+
+               a:hover {
+                    color: $gray-500 !important;
+               }
           }
      }
 
