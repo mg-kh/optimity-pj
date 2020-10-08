@@ -1,5 +1,5 @@
 // For large devices
-$nav_height_list: 80px;
+$nav_list_height: 80px;
 
 @media (min-width: 992px) {
      .col-lg-five {
@@ -9,27 +9,23 @@ $nav_height_list: 80px;
      }
 
      .nav__bar__container {
-          .navbar-brand {
-               height: 70px;
-          }
 
+          ul {
+               li {
+                    height: $nav_list_height;
 
-          ul>li {
-               height: $nav_height_list;
-
-               a {
-                    padding: 0px 16px !important;
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                    line-height: 80px;
+                    a {
+                         padding: 0px 16px !important;
+                         width: 100%;
+                         height: 100%;
+                         line-height: 80px;
+                    }
                }
           }
 
           .dropdown-menu {
                a {
-                    height: 100%;
-                    line-height: $nav_height_list/2;
+                    line-height: $nav_list_height/2;
                }
           }
 
