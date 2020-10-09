@@ -29,11 +29,18 @@
 
      .hero__slider__container {
           h1 {
-               font-size: $h1_font_size;
+               font-size: $h1_font_size!important;
           }
 
           p {
-               font-size: $p_font_size;
+               font-size: $p_font_size!important;
+          }
+
+          .carousel-caption {
+               width: 70%!important;
+               transform: translate(-50%, -50%);
+               top: 50%!important;
+               left: 50%!important;
           }
      }
 }

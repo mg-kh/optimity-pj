@@ -24,13 +24,13 @@
                li {
 
                     &.nav-item.dropdown.show>.nav-link {
-                         background: $red;
+                         background: $pinky;
                          color: white !important;
                     }
 
                     &.active {
                          a {
-                              background: $red;
+                              background: $pinky;
                               color: white !important;
                          }
                     }
@@ -40,13 +40,13 @@
                          display: block;
 
                          &:hover {
-                              background: $red;
+                              background: $pinky;
                               color: white !important;
                          }
                     }
 
                     .dropdown-menu {
-                         background: $red;
+                         background: $pinky;
                          min-width: 450px;
                          color: white;
                          padding: 20px;
@@ -85,6 +85,15 @@
           font-size: 30px;
      }
 
+     .carousel-control-prev-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(237 0 140)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+     }
+
+     .carousel-control-next-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(237 0 140)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+     }
+
+
      .carousel-caption {
           width: 75%;
           transform: translate(-50%, -50%);
@@ -115,6 +124,10 @@
           font-weight: bold;
      }
 
+     button[type="submit"]{
+          background : $pinky;
+     }
+
      input.form-control {
           height: 45px;
      }
@@ -134,7 +147,7 @@
      .breadcrumb {
           li {
                &.active a {
-                    color: $red !important;
+                    color: $pinky !important;
                }
 
                a {
@@ -161,13 +174,15 @@
 
      h1,
      h3 {
-          color: $red !important;
+          color: $pinky !important;
           font-family: 'Exo 2',
                sans-serif;
      }
 }
 
 .sub__menu__container {
+
+     background: $pinky;
 
      a {
           text-decoration: none;
@@ -178,13 +193,13 @@
      }
 
      a:hover {
-          color: $red;
+          color: $pinky;
 
           .card {
                background: white !important;
 
                .cls-1 {
-                    fill: $red;
+                    fill: $pinky;
                }
           }
      }
@@ -204,7 +219,7 @@ footer {
 
      a {
           display: block;
-          color: $red;
+          color: $pinky;
           text-decoration: none !important;
 
           &:hover {
