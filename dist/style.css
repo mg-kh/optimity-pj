@@ -10888,7 +10888,7 @@ body {
 .contact__us__banner__container {
   height: 200px;
   margin-top: 66px;
-  background-image: url("./../images/bgart.jpg");
+  background-image: url("./../assets/images/bgart.jpg");
   background-position: -200px 14px;
   background-repeat: no-repeat;
 }
