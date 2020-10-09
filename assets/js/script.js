@@ -1,10 +1,6 @@
-import $ from "jquery";
+import * as $ from "jquery";
 import "bootstrap";
-// import Swiper from "swiper";
-// import "swiper/swiper-bundle.css";
 
-import "../scss/style.scss";
-
-$(document).ready(function () {
+$(document).ready(function() {
   //..
 });
