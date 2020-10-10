@@ -21,22 +21,42 @@
           .collapse {
                height: 100vh;
                overflow-y: auto;
-               padding-bottom: 80px !important;
+               padding-bottom: 200px !important;
           }
 
-          .collapsing{
-               transition: 0s!important;
+          .collapsing {
+               transition: 0s !important;
           }
 
           ul {
                li {
+                    .dropdown-menu {
+                         background: transparent !important;
+                         border: none !important;
+                         padding-left: 1rem!important;
+
+                         a {
+                              text-decoration: none;
+                              height: 100%;
+                              padding: 0px 0px !important;
+
+                              h3{
+                                   font-size: 17px!important;
+                              }
+
+                              &:not(.priority_menu){
+                                   padding-left: 10px!important;
+                              }
+                         }
+                    }
+
                     a {
                          padding-left: 1rem !important;
+                         padding-top: 1rem !important;
+                         color: $pinky !important;
 
                          &::after {
-                              position: absolute;
-                              top: 19px;
-                              right: 36px;
+                              display: none;
                          }
                     }
                }

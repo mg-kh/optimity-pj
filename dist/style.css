@@ -10829,9 +10829,8 @@ hr {
 .nav__bar__container nav .navbar-brand {
   height: 70px;
 }
-.nav__bar__container nav ul li.nav-item.dropdown.show > .nav-link {
-  background: #ed008c;
-  color: white !important;
+.nav__bar__container nav ul li:hover .dropdown-menu {
+  display: block !important;
 }
 .nav__bar__container nav ul li.active a, .nav__bar__container nav ul li.current-menu-item a {
   background: #ed008c;
@@ -10856,10 +10855,11 @@ hr {
   color: white;
   text-decoration: none;
   height: 100%;
-  padding: 0px 3px !important;
+  transition: all 0.3s;
 }
 .nav__bar__container nav ul li .dropdown-menu a:hover {
-  color: #dbdbdb !important;
+  color: silver !important;
+  padding-left: 10px !important;
 }
 
 .hero__slider__container {
@@ -11018,7 +11018,7 @@ footer .property__container .badge__container:nth-child(3) {
   .hero__slider__container .carousel-caption {
     width: 70% !important;
     transform: translate(-50%, -50%);
-    top: 50% !important;
+    top: 60% !important;
     left: 50% !important;
   }
 }
@@ -11036,18 +11036,34 @@ footer .property__container .badge__container:nth-child(3) {
   .nav__bar__container .collapse {
     height: 100vh;
     overflow-y: auto;
-    padding-bottom: 80px !important;
+    padding-bottom: 200px !important;
   }
   .nav__bar__container .collapsing {
     transition: 0s !important;
   }
-  .nav__bar__container ul li a {
+  .nav__bar__container ul li .dropdown-menu {
+    background: transparent !important;
+    border: none !important;
     padding-left: 1rem !important;
   }
+  .nav__bar__container ul li .dropdown-menu a {
+    text-decoration: none;
+    height: 100%;
+    padding: 0px 0px !important;
+  }
+  .nav__bar__container ul li .dropdown-menu a h3 {
+    font-size: 17px !important;
+  }
+  .nav__bar__container ul li .dropdown-menu a:not(.priority_menu) {
+    padding-left: 10px !important;
+  }
+  .nav__bar__container ul li a {
+    padding-left: 1rem !important;
+    padding-top: 1rem !important;
+    color: #ed008c !important;
+  }
   .nav__bar__container ul li a::after {
-    position: absolute;
-    top: 19px;
-    right: 36px;
+    display: none;
   }
 
   .hero__slider__container h1 {

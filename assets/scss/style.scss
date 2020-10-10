@@ -23,10 +23,10 @@
 
           ul {
                li {
-
-                    &.nav-item.dropdown.show>.nav-link {
-                         background: $pinky;
-                         color: white !important;
+                    &:hover{
+                         .dropdown-menu{
+                              display: block!important;
+                         }
                     }
 
                     &.active , &.current-menu-item {
@@ -57,10 +57,12 @@
                               color: white;
                               text-decoration: none;
                               height: 100%;
-                              padding: 0px 3px !important;
+                              // padding: 0px 3px !important;
+                              transition: all 0.3s;
 
                               &:hover {
-                                   color: rgb(219, 219, 219) !important;
+                                   color: rgb(192, 192, 192) !important;
+                                   padding-left: 10px!important;
                               }
                          }
                     }
