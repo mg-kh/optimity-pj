@@ -116,10 +116,37 @@
 
 .contact__us__banner__container {
      height: 200px;
-     margin-top: 66px;
+     margin-top: 80px;
      background-image: url('./../assets/images/bgart.jpg');
      background-repeat: no-repeat;
      background-size: cover;
+         .breadcrumb,
+     p {
+          font-size: 18px;
+          text-align: justify;
+     }
+
+     .breadcrumb {
+          li {
+               &.active a {
+                    color: white !important;
+               }
+
+               &:before{
+                    color : white;
+               }
+
+               a {
+                    color: white !important;
+                    text-decoration: none;
+
+                    &:hover {
+                         color: rgb(207, 207, 207) !important;
+                    }
+               }
+          }
+
+     }
 }
 
 .contact__form__container {
@@ -139,30 +166,6 @@
           label {
                font-weight: normal;
           }
-     }
-
-     .breadcrumb,
-     p {
-          font-size: 18px;
-          text-align: justify;
-     }
-
-     .breadcrumb {
-          li {
-               &.active a {
-                    color: $pinky !important;
-               }
-
-               a {
-                    color: gray !important;
-                    text-decoration: none;
-
-                    &:hover {
-                         color: rgb(207, 207, 207) !important;
-                    }
-               }
-          }
-
      }
 
      .contact__info {

@@ -10898,10 +10898,28 @@ hr {
 
 .contact__us__banner__container {
   height: 200px;
-  margin-top: 66px;
+  margin-top: 80px;
   background-image: url("./../assets/images/bgart.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+.contact__us__banner__container .breadcrumb,
+.contact__us__banner__container p {
+  font-size: 18px;
+  text-align: justify;
+}
+.contact__us__banner__container .breadcrumb li.active a {
+  color: white !important;
+}
+.contact__us__banner__container .breadcrumb li:before {
+  color: white;
+}
+.contact__us__banner__container .breadcrumb li a {
+  color: white !important;
+  text-decoration: none;
+}
+.contact__us__banner__container .breadcrumb li a:hover {
+  color: #cfcfcf !important;
 }
 
 .contact__form__container label {
@@ -10915,21 +10933,6 @@ hr {
 }
 .contact__form__container .form-check label {
   font-weight: normal;
-}
-.contact__form__container .breadcrumb,
-.contact__form__container p {
-  font-size: 18px;
-  text-align: justify;
-}
-.contact__form__container .breadcrumb li.active a {
-  color: #ed008c !important;
-}
-.contact__form__container .breadcrumb li a {
-  color: gray !important;
-  text-decoration: none;
-}
-.contact__form__container .breadcrumb li a:hover {
-  color: #cfcfcf !important;
 }
 .contact__form__container .contact__info p {
   margin: 0 !important;
