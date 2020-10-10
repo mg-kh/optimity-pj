@@ -3,6 +3,7 @@
 
 
 .nav__bar__container {
+     box-shadow: 1px 1px 3px 2px #7e7e7e2b;
      position: fixed;
      width: 100%;
      top: 0;
@@ -28,7 +29,7 @@
                          color: white !important;
                     }
 
-                    &.active {
+                    &.active , &.current-menu-item {
                          a {
                               background: $pinky;
                               color: white !important;
@@ -115,8 +116,8 @@
      height: 200px;
      margin-top: 66px;
      background-image: url('./../assets/images/bgart.jpg');
-     background-position: -200px 14px;
      background-repeat: no-repeat;
+     background-size: cover;
 }
 
 .contact__form__container {
