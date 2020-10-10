@@ -6,45 +6,50 @@
 
 <!-- Hero Slider -->
 <section class="hero__slider__container">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div id="homeCarousel" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner-1.jpg'; ?>"
-          class="d-sm-block d-none w-100" alt="photo name">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/mobile-banner-1-mobile.jpg'; ?>"
-          class="d-block d-sm-none" alt="">
-        <div class="carousel-caption d-none d-md-block">
-          <h1>40 Years of Success.</h1>
-          <p>Discover the difference with a partner grounded by success and future readiness.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner-2.jpg'; ?>"
-          class="d-sm-block d-none w-100" alt="photo name">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/mobile-banner-1-mobile.jpg'; ?>"
-          class="d-block d-sm-none" alt="">
-        <div class="carousel-caption d-none d-md-block">
-          <h1>Beyond a Solution Provider, Becoming Your Technology Partner.</h1>
-          <p>Your company deserves a partner with the capabilities today to deliver solutions for tomorrow.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/banner-3.jpg'; ?>"
-          class="d-sm-block d-none w-100" alt="photo name">
-        <img src="<?php echo get_template_directory_uri() . '/assets/images/mobile-banner-1-mobile.jpg'; ?>"
-          class="d-block d-sm-none" alt="">
-        <div class="carousel-caption d-none d-md-block">
-          <h1>Assured of Quality.</h1>
-          <p>With Asia’s largest pool of certified engineers supporting you, you can be assured of the quality your
-            customers will remember you for.</p>
-        </div>
-      </div>
+
+      <?php if ( have_rows( 'slider' ) ) : $counter = 0; ?>
+
+          <?php
+              while ( have_rows( 'slider' ) ) : the_row(); 
+
+              $lg_img = get_sub_field( 'large_img' );
+              $lg_img_alt = $lg_img['alt'];
+              $lg_img_url = $lg_img['url'];
+              
+              $md_img = get_sub_field( 'small_img' );
+              $md_img_alt = $md_img['alt'];
+              $md_img_url = $md_img['sizes']['medium'];
+          ?>
+
+            <div class="carousel-item <?php echo $counter == 0 ? 'active' : ''; ?>">
+              <img 
+                src="<?php echo esc_url( wp_make_link_relative( $lg_img_url ) ); ?>"
+                class="d-sm-block d-none w-100" 
+                alt="<?php echo $lg_img_alt; ?>"
+              >
+              <img 
+                src="<?php echo esc_url( wp_make_link_relative( $md_img_url ) ); ?>" 
+                class="d-block d-sm-none" 
+                alt="<?php echo $md_img_alt; ?>"
+              >
+              <div class="carousel-caption d-none d-md-block">
+                <h1><?php the_sub_field( 'title' ); ?></h1>
+                <p><?php the_sub_field( 'subtitle' ); ?></p>
+              </div>
+            </div>
+
+          <?php $counter++; endwhile; ?>
+
+      <?php endif; ?>
+
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
