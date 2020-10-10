@@ -10896,6 +10896,40 @@ hr {
   min-height: 70vh;
 }
 
+.about__us__hero__container {
+  padding: 300px 0px;
+  background-image: url(./../assets/images/abt1_1.jpg);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0;
+  font-family: "Exo 2", sans-serif;
+}
+.about__us__hero__container .text__container {
+  background: #1e1e1e12;
+  border-radius: 9px;
+  padding: 20px;
+}
+.about__us__hero__container .text__container p {
+  color: white;
+}
+.about__us__hero__container .text__container h1 {
+  color: #ed008c;
+}
+
+.about__us__container {
+  font-family: "Exo 2", sans-serif;
+}
+.about__us__container h1 {
+  color: #ed008c;
+}
+.about__us__container p {
+  color: #6d37a9;
+}
+.about__us__container .img__container {
+  width: 300px;
+}
+
 .contact__us__banner__container {
   height: 200px;
   margin-top: 80px;
@@ -11092,6 +11126,11 @@ footer .property__container .badge__container:nth-child(3) {
 
   .svg__container {
     width: 45px;
+  }
+
+  .about__us__hero__container {
+    padding: 200px 0px;
+    background-position: 0;
   }
 
   footer h3:first-child {
