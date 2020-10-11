@@ -10,9 +10,21 @@
 
   nav {
     button {
-      outline: none;
-    }
+      background: transparent;
+      box-shadow: 0px 0px 0px transparent;
+      border: 0px solid transparent;
+      text-shadow: 0px 0px 0px transparent;
 
+      &:active {
+        outline: none;
+        border: none;
+      }
+
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
     .navbar-brand {
       height: 80px;
       padding: 10px;
@@ -58,6 +70,99 @@
 
             &:hover {
               padding-left: 10px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+aside {
+  button {
+    margin-right: 0px!important;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+
+    &:active {
+      outline: none;
+      border: none;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+  ul {
+    li {
+      transition: all 0.3s;
+      &.active,
+      &.current-menu-item {
+        background: $pinky !important;
+        & > a {
+          color: white !important;
+          padding-left: 10px !important;
+          border-left: 5px solid #a70163 !important;
+        }
+      }
+
+      &.nav-item {
+        background: #737373;
+        & > a {
+          color: white !important;
+          padding-left: 10px !important;
+          border-left: 5px solid #a2a2a2;
+        }
+        .dropdown-menu {
+          padding-left: 15px;
+        }
+
+        &:hover {
+          background: $pinky !important;
+          & > a {
+            color: white !important;
+            padding-left: 10px !important;
+            border-left: 5px solid #a70163 !important;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 70px !important;
+      }
+
+      a {
+        font-size: 17px;
+        display: block;
+        color: $violet;
+
+        &::after {
+          display: none !important;
+        }
+      }
+
+      .dropdown-menu {
+        border: none;
+        color: $violet;
+        top: 95% !important;
+
+        a {
+          color: $violet;
+          text-decoration: none;
+          transition: all 0.3s;
+          font-family: $titlefont;
+
+          &:not(.priority_menu) {
+            padding-left: 15px !important;
+          }
+
+          &:hover {
+            font-weight: bold;
+            & > h3 {
+              font-weight: bold;
             }
           }
         }
