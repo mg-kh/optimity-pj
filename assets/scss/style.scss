@@ -7,17 +7,15 @@
   width: 100%;
   top: 0;
   z-index: 2;
-  background: white !important;
 
   nav {
-    padding: 0px;
-
     button {
       outline: none;
     }
 
     .navbar-brand {
-      height: 70px;
+      height: 80px;
+      padding: 10px;
     }
 
     ul {
@@ -30,8 +28,8 @@
 
         &.active,
         &.current-menu-item {
-          a {
-            background: $pinky;
+          background: $pinky;
+          & > a {
             color: white !important;
           }
         }
@@ -39,6 +37,7 @@
         a {
           font-size: 17px;
           display: block;
+          color: $violet;
 
           &:hover {
             background: $pinky;
@@ -50,18 +49,14 @@
           background: $pinky;
           min-width: 450px;
           color: white;
-          padding: 20px;
           top: 95% !important;
 
           a {
             color: white;
             text-decoration: none;
-            height: 100%;
-            // padding: 0px 3px !important;
             transition: all 0.3s;
 
             &:hover {
-              color: rgb(192, 192, 192) !important;
               padding-left: 10px !important;
             }
           }
@@ -120,7 +115,7 @@
   background-position: 0;
   font-family: "Exo 2", sans-serif;
   .text__container {
-    background: #1e1e1e12     ;
+    background: #1e1e1e12;
     border-radius: 9px;
     padding: 20px;
     p {
@@ -140,9 +135,13 @@
   p {
     color: $violet;
   }
-
   .img__container {
     width: 300px;
+  }
+
+  .about__comp:nth-of-type(even) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 
@@ -218,7 +217,7 @@
 }
 
 .sub__menu__container {
-  background: $pinky;
+  background: $violet;
 
   a {
     text-decoration: none;
@@ -233,6 +232,7 @@
 
     .card {
       background: white !important;
+      transition: all 0.3s;
 
       .cls-1 {
         fill: $pinky;

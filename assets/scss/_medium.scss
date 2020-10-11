@@ -21,17 +21,19 @@
     .collapse {
       height: 100vh;
       overflow-y: auto;
-      padding-bottom: 200px !important;
-    }
-
-    .collapsing {
-      transition: 0s !important;
+      ul {
+        li {
+          &:last-child {
+            margin-bottom: 150px !important;
+          }
+        }
+      }
     }
 
     ul {
       li {
         .dropdown-menu {
-          background: transparent !important;
+          background: white !important;
           border: none !important;
           padding-left: 1rem !important;
 
@@ -94,8 +96,14 @@
   }
 
   .about__us__hero__container {
-    padding : 200px 0px;
+    padding: 200px 0px;
     background-position: 0;
+  }
+
+  .about__us__container {
+    .about__comp{
+      flex-direction: column-reverse!important;
+    }
   }
 
   footer {
