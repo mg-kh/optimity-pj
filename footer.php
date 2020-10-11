@@ -13,7 +13,7 @@
         <div class="container property__container">
           <div class="row">
             <div class="col-12 col-md-6 p-0 mb-0">
-              <p class="mb-0">&copy; <?php echo get_bloginfo( 'title' ); ?> Telecommunications Ltd. All Rights Reserved.</p>
+              <p class="mb-0">&copy; <?php echo get_bloginfo( 'title' ); ?>. All Rights Reserved.</p>
             </div>
           </div>
         </div>

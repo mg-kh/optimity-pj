@@ -56,3 +56,9 @@ function special_nav_class($classes, $item) {
     return $classes;
 }
 add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 2 );
+
+
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+// require get_template_directory() . '/inc/template-functions.php';
