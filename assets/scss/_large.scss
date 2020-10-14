@@ -2,40 +2,103 @@
 $nav_list_height: 80px;
 
 @media (min-width: 992px) {
-     .col-lg-five {
-          @include make-col-ready(30px);
-          flex: 0 0 20%;
-          max-width: 20%;
-     }
+  .col-lg-five {
+    @include make-col-ready(30px);
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
 
-     .nav__bar__container {
+  footer {
+    h3 {
+      height: 103px;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+}
 
-          ul {
-               li {
-                    height: $nav_list_height;
+@media (min-width: 991px) {
+  nav {
+    font-size: 0; // for no gap
+    background: white;
+    height: $nav_height;
+  }
+  ul {
+    padding: 0px;
+    li {
+      display: inline-block;
+      list-style: none;
+      position: relative;
+      height: $nav_height;
 
-                    a {
-                         padding: 0px 16px !important;
-                         width: 100%;
-                         height: 100%;
-                         line-height: $nav_list_height;
-                    }
-               }
+      &.current-menu-item {
+        a {
+          color: white;
+          background: red;
+        }
+      }
+
+      &:hover {
+        & > .sub-menu {
+          display: block;
+        }
+      }
+
+      a {
+        color: black;
+        display: inline-block;
+        padding: 0px 20px;
+        font-size: 16px;
+        text-decoration: none !important;
+        height: $nav_height;
+        line-height: $nav_height;
+
+        &:hover {
+          color: rgb(139, 139, 139);
+        }
+
+        &:not(:only-child):after {
+          content: "▼";
+          padding-left: 7px;
+          font-size: 10px;
+        }
+      }
+
+      .sub-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 250px;
+        background: red;
+        padding: 6px;
+        z-index: 10;
+
+        & > li {
+          width: 100%;
+          height: unset;
+          margin: 10px auto;
+        }
+
+        & > li > a {
+          line-height: unset;
+          height: unset;
+          color: white;
+        }
+
+        & > li > .sub-menu {
+          top: 100%;
+          left: 50%;
+          z-index: 10;
+          background: black !important;
+
+          li {
+            a {
+              background: black;
+            }
           }
-
-          .dropdown-menu {
-               a {
-                    line-height: $nav_list_height/2;
-               }
-          }
-
-     }
-
-     footer {
-          h3 {
-               height: 103px;
-               display: flex;
-               align-items: flex-end;
-          }
-     }
+        }
+      }
+    }
+  }
 }
