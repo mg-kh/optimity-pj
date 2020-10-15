@@ -1,10 +1,23 @@
 @import "./components";
 @import "./standard";
 
-nav {
+.navigation__bar {
   background: white;
-  box-shadow: 0px 1px 5px 2px #f2f2f2;
+  box-shadow: 0px 1px 5px 2px #67676717;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  button {
+    outline: none;
+    color: $violet;
+
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
 }
+
 .logo__container {
   height: $nav_height;
   padding: $nav_height/10;
@@ -91,7 +104,6 @@ nav {
 
 .diamond__banner__container {
   height: 200px;
-  margin-top: 80px;
   background-image: url("./../assets/images/bgart.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -207,7 +219,6 @@ nav {
 .sub__hero__container {
   background-image: url(./../assets/images/bg_742.jpg);
   padding: 200px 0px;
-  margin-top: 80px;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -226,6 +237,7 @@ nav {
         display: block;
         padding: 10px 15px;
         transition: all 0.3s;
+        font-size: 15px;
 
         &:hover {
           background: white;
