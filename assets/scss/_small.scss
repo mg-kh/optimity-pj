@@ -1,46 +1,44 @@
 // For small devices
 @media (max-width: 576px) {
-     $h1_font_size: 30px;
-     $p_font_size: 16px;
+  $h1_font_size: 30px;
+  $p_font_size: 16px;
 
-     .nav__bar__container {
-
-          .container {
-               max-width: 600px;
+  .nav__bar__container {
+    nav {
+      ul {
+        li {
+          .dropdown-menu {
+            min-width: 300px !important;
           }
+        }
+      }
+    }
+  }
 
-          nav {
-               ul {
-                    li {
-                         .dropdown-menu {
-                              min-width: 300px !important;
-                         }
-                    }
-               }
-          }
+  .sub__menu__container {
+    h4 {
+      font-size: 15px !important;
+    }
+  }
 
-     }
+  .hero__slider__container {
+    h1 {
+      font-size: $h1_font_size !important;
+    }
 
-     .sub__menu__container {
-          h4 {
-               font-size: 15px !important;
-          }
-     }
+    p {
+      font-size: $p_font_size !important;
+    }
 
-     .hero__slider__container {
-          h1 {
-               font-size: $h1_font_size!important;
-          }
+    .carousel-caption {
+      width: 70% !important;
+      transform: translate(-50%, -50%);
+      top: 60% !important;
+      left: 50% !important;
+    }
+  }
 
-          p {
-               font-size: $p_font_size!important;
-          }
-
-          .carousel-caption {
-               width: 70%!important;
-               transform: translate(-50%, -50%);
-               top: 60%!important;
-               left: 50%!important;
-          }
-     }
+  .sub__hero__container {
+    padding: 100px 0px!important;
+  }
 }

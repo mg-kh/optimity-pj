@@ -1,14 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Exo+2:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Exo+2:wght@300;600&display=swap");
 
-$pinky : #ed008c;
-$violet : #6d37a9;
+$pinky: #ed008c;
+$violet: #6d37a9;
+$mainfont: "Abel", sans-serif;
+$titlefont: "Exo 2", sans-serif;
+$nav_height: 80px;
 
 body {
-     font-family: 'Abel',
-          sans-serif;
+  font-family: $mainfont;
 }
 
-hr{
-     background: $pinky;
+.main__font {
+  font-family: $mainfont;
+}
+
+.title__font {
+  font-family: $titlefont;
+}
+
+.bg__pinky {
+  background: $pinky;
+}
+.text__pinky {
+  color: $pinky;
+}
+
+.bg__violet {
+  background: $violet;
+}
+.text__violet {
+  color: $violet;
+}
+
+.content__font__size {
+  font-size: 20px;
 }

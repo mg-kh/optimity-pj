@@ -1,62 +1,56 @@
 //Medium device
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   $h1_font_size: 45px;
   $p_font_size: 25px;
   $svg_container_width: 45px;
 
-  .nav__bar__container {
-    .container {
-      max-width: 1000px;
-      padding: 0px 0px;
-    }
+  .logo__wrapper {
+    width: 100%;
+  }
 
-    .navbar-brand {
-      margin-left: 1rem;
-    }
-
-    .navbar-toggler {
-      margin-right: 1rem;
-    }
-
-    .collapse {
-      height: 100vh;
-      overflow-y: auto;
-      padding-bottom: 200px !important;
-    }
-
-    .collapsing {
-      transition: 0s !important;
-    }
+  .side__menu {
+    position: fixed;
+    width: 300px;
+    right: 0;
+    background: white;
+    height: 100%;
+    padding: 30px 10px 10px 30px;
+    top: $nav_height;
+    z-index: 10;
 
     ul {
+      padding: 0;
+
       li {
-        .dropdown-menu {
-          background: transparent !important;
-          border: none !important;
-          padding-left: 1rem !important;
+        list-style: none;
+        margin-bottom: 30px;
 
-          a {
-            text-decoration: none;
-            height: 100%;
-            padding: 0px 0px !important;
-
-            h3 {
-              font-size: 17px !important;
-            }
-
-            &:not(.priority_menu) {
-              padding-left: 10px !important;
-            }
+        a {
+          color: $violet;
+          font-size: 20px;
+          text-decoration: none;
+          transition: all 0.3s;
+          &:hover {
+            padding-left: 15px;
           }
         }
 
-        a {
-          padding-left: 1rem !important;
-          padding-top: 1rem !important;
-          color: $pinky !important;
+        & > .sub-menu {
+          li {
+            margin-bottom: 0px;
+            a {
+              color: $pinky;
+              font-size: 15px;
+            }
 
-          &::after {
-            display: none;
+            & > .sub-menu {
+              padding-left: 10px;
+              ul {
+                &.sub-menu {
+                  padding-left: 10px;
+                }
+              }
+            }
           }
         }
       }
@@ -94,8 +88,12 @@
   }
 
   .about__us__hero__container {
-    padding : 200px 0px;
+    padding: 200px 0px;
     background-position: 0;
+  }
+
+  .left__right__shift {
+    flex-direction: column-reverse !important;
   }
 
   footer {

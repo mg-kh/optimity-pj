@@ -101,7 +101,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_1__);
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0__(document).ready(function () {//..
+jquery__WEBPACK_IMPORTED_MODULE_0__(document).ready(function () {
+  // console.log(text);
+  jquery__WEBPACK_IMPORTED_MODULE_0__(".sub-menu").addClass("animate__animated animate__fadeIn");
+  jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu").addClass("animate__animated animate__fadeInRight");
+  jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu").click(function () {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0__(this).children().hasClass("fa-bars")) {
+      jquery__WEBPACK_IMPORTED_MODULE_0__(this).children().removeClass("fa-bars");
+      jquery__WEBPACK_IMPORTED_MODULE_0__(this).children().addClass("fa-times");
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_0__(this).children().removeClass("fa-times");
+      jquery__WEBPACK_IMPORTED_MODULE_0__(this).children().addClass("fa-bars");
+    } // console.log($(this).children());
+    // <i class="fas fa-times"></i>
+
+
+    jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu").toggleClass("d-none");
+  });
 });
 
 /***/ }),
