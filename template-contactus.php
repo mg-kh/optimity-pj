@@ -31,7 +31,8 @@
 
         <?php endif; ?>
 
-        <h5 class="font-weight-bold mt-4 mb-2"><?php echo get_bloginfo( 'title' ); ?></h5>
+        <h5 class="font-weight-bold mt-4 mb-2"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h5>
+
         <div class="contact__info">
           
           <?php
@@ -40,13 +41,13 @@
           ?>
     
           <p>
-            <?php echo $contact_attributes['address']; ?>
+            <?php echo esc_html( $contact_attributes['address'] ); ?>
           </p>
           <p>
-            <?php echo $contact_attributes['tel']; ?>
+            <?php echo esc_html( $contact_attributes['tel'] ); ?>
           </p>
           <p>
-            <?php echo $contact_attributes['email']; ?>
+            <?php echo esc_html( $contact_attributes['email'] ); ?>
           </p>
         </div>
       </div>

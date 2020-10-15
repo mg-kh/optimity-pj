@@ -27,12 +27,12 @@
               <img 
                 src="<?php echo esc_url( wp_make_link_relative( $lg_img_url ) ); ?>"
                 class="d-sm-block d-none w-100" 
-                alt="<?php echo $lg_img_alt; ?>"
+                alt="<?php echo esc_attr( $lg_img_alt ); ?>"
               >
               <img 
                 src="<?php echo esc_url( wp_make_link_relative( $md_img_url ) ); ?>" 
                 class="d-block d-sm-none" 
-                alt="<?php echo $md_img_alt; ?>"
+                alt="<?php echo esc_attr( $md_img_alt ); ?>"
               >
               <div class="carousel-caption d-none d-md-block">
                 <h1><?php the_sub_field( 'title' ); ?></h1>

@@ -65,7 +65,7 @@
           <div class="img__container m-auto">
             <img 
               src="<?php echo esc_url( wp_make_link_relative( $three_facts['bg_img']['url'] ) ); ?>" 
-              alt="<?php echo $three_facts['bg_img']['alt']; ?>"
+              alt="<?php echo esc_attr( $three_facts['bg_img']['alt'] ); ?>"
               class="w-100" 
             >
           </div>
@@ -96,7 +96,7 @@
           <div class="img__container m-auto">
             <img 
               src="<?php echo esc_url( wp_make_link_relative( $our_success['bg_img']['url'] ) ); ?>" 
-              alt="<?php echo $our_success['bg_img']['alt']; ?>"
+              alt="<?php echo esc_attr( $our_success['bg_img']['alt'] ); ?>"
               class="w-100"
             >
           </div>

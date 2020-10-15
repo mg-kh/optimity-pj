@@ -26,7 +26,7 @@ add_action( 'wp_enqueue_scripts', 'optimity_styles' );
  * Enqueue scripts
  */
 function optimity_scripts() {
-    wp_deregister_script('jquery');
+    // wp_deregister_script('jquery');
 
     wp_enqueue_script( 'script', get_template_directory_uri() . BASE_ASSET_URL . '/script.js', array(), THEME_VERSION, true );
 }
@@ -44,6 +44,18 @@ if ( ! function_exists( 'optimity_setup' ) ) {
                 'primary_menu' => 'Primary Menu'        
             )
         );
+
+        /**
+         * Let WordPress manage the document title.
+         */
+        add_theme_support( 'title-tag' );
+
+        /**
+         * Add support for core custom logo.
+         * 
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support( 'custom-logo' );
     }
 }
 add_action( 'after_setup_theme', 'optimity_setup' );
