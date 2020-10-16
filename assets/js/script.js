@@ -2,37 +2,23 @@ import * as $ from "jquery";
 import "bootstrap";
 
 $(document).ready(function() {
-  // console.log(text);
-  $(".sub-menu").addClass("animate__animated animate__fadeIn");
-  $(".side__menu").addClass("animate__animated animate__fadeInRight");
+  // menu show hide based on dynamically changing screen size
+  $(window).on("resize", function() {
+    if ($(this).innerWidth() > 991) {
+      $("body").removeClass("show-global-overlay");
+      $(".show__side__menu").removeClass("close");
+      $(".side__menu").css("right", "-300px");
+    }
+  });
 
   $(".show__side__menu").click(function() {
-    if (
-      $(this)
-        .children()
-        .hasClass("fa-bars")
-    ) {
-      $(this)
-        .children()
-        .removeClass("fa-bars");
-      $(this)
-        .children()
-        .addClass("fa-times");
-    } else {
-      $(this)
-        .children()
-        .removeClass("fa-times");
-      $(this)
-        .children()
-        .addClass("fa-bars");
-    }
-    // console.log($(this).children());
-    // <i class="fas fa-times"></i>
-    $(".side__menu").toggleClass("d-none");
-    // if (!$(".side__menu").hasClass("d-none")) {
-    //   $(".side__menu").addClass("animate__fadeOutRight");
-    // } else {
-    //   $(".side__menu").removeClass("animate__fadeOutRight");
-    // }
+    let $sideMenu = $(".side__menu");
+
+    $("body").toggleClass("show-global-overlay");
+    $(".show__side__menu").toggleClass("close");
+
+    !$(this).hasClass("close")
+      ? $sideMenu.animate({ right: "-300px" }, "slow")
+      : $sideMenu.animate({ right: "0" }, "slow");
   });
 });
