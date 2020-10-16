@@ -116,7 +116,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0__(document).ready(function () {
     // <i class="fas fa-times"></i>
 
 
-    jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu").toggleClass("d-none");
+    jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu").toggleClass("d-none"); // if (!$(".side__menu").hasClass("d-none")) {
+    //   $(".side__menu").addClass("animate__fadeOutRight");
+    // } else {
+    //   $(".side__menu").removeClass("animate__fadeOutRight");
+    // }
   });
 });
 

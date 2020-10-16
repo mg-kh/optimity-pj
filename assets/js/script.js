@@ -29,5 +29,10 @@ $(document).ready(function() {
     // console.log($(this).children());
     // <i class="fas fa-times"></i>
     $(".side__menu").toggleClass("d-none");
+    // if (!$(".side__menu").hasClass("d-none")) {
+    //   $(".side__menu").addClass("animate__fadeOutRight");
+    // } else {
+    //   $(".side__menu").removeClass("animate__fadeOutRight");
+    // }
   });
 });
