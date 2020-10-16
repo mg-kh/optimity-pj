@@ -18,49 +18,45 @@
 </head>
 
 <body>
-  <!-- Nav Bar -->
-  <section class="nav__bar__container bg-white">
+  <div class="global-overlay"></div>
+  <!-- Navigation -->
+  <nav class="navigation__bar">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-1 py-lg-0">
-        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-          
-          <?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
-              
-              <?php
-                // Get Custom Logo URL
-                $custom_logo_id = get_theme_mod( 'custom_logo' );
-                $custom_logo_data = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-                $custom_logo_url = $custom_logo_data[0];
-              ?>
+      <div class="row d-flex justify-content-between">
+        <div class="logo__wrapper d-lg-inline-block d-flex align-items-center justify-content-between">
+          <a class="logo__container" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 
-              <img 
-                src="<?php echo esc_url( wp_make_link_relative( $custom_logo_url ) ); ?>" 
-                alt="site-logo"
-                class="h-100" 
-              >
-          <?php else: ?>
+            <?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) : ?>
+
+            <?php
+                  // Get Custom Logo URL
+                  $custom_logo_id = get_theme_mod( 'custom_logo' );
+                  $custom_logo_data = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+                  $custom_logo_url = $custom_logo_data[0];
+                ?>
+
+              <img src="<?php echo esc_url( wp_make_link_relative( $custom_logo_url ) ); ?>" alt="site-logo" class="h-100">
+            <?php else: ?>
               <?php echo bloginfo( 'name' ); ?>
-          <?php endif; ?>
-        </a>
-        <button class="navbar-toggler border-0" type="button" data-toggle="collapse"
-          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+            <?php endif; ?>
+          </a>
+          <button class="btn rounded-0 d-lg-none btn-lg show__side__menu">
+            <svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><path fill='none' stroke='currentColor' stroke-linecap='round' stroke-miterlimit='10' stroke-width='32' d='M80 160h352M80 256h352M80 352h352'/></svg>
+          </button>
+        </div>
 
-        <div class="collapse navbar-collapse py-3 py-lg-0" id="navbarSupportedContent">
+        <div class="d-lg-block side__menu">
           <?php
 
               wp_nav_menu(
                   array(
                       'theme_location'  =>    'primary_menu',
-                      'menu_class'      =>    'navbar-nav ml-auto',
                       'container'       =>    false,
                   )
               );
 
           ?>
         </div>
-      </nav>
+      </div>
     </div>
-  </section>
+  </nav>
