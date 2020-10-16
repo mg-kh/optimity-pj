@@ -18107,8 +18107,8 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/kophyo/Sites/optimity/wp-content/themes/optimity/assets/js/script.js */"./assets/js/script.js");
-module.exports = __webpack_require__(/*! /Users/kophyo/Sites/optimity/wp-content/themes/optimity/assets/scss/style.scss */"./assets/scss/style.scss");
+__webpack_require__(/*! C:\Users\MSI\Desktop\Optimity\assets\js\script.js */"./assets/js/script.js");
+module.exports = __webpack_require__(/*! C:\Users\MSI\Desktop\Optimity\assets\scss\style.scss */"./assets/scss/style.scss");
 
 
 /***/ })
