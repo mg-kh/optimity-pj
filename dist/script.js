@@ -110,9 +110,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0__(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu").css("right", "-300px");
     }
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu").click(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu  , .global-overlay").click(function () {
     var $sideMenu = jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu");
-    jquery__WEBPACK_IMPORTED_MODULE_0__("body").toggleClass("show-global-overlay");
+    jquery__WEBPACK_IMPORTED_MODULE_0__("body").toggleClass("show-global-overlay global__scroll__hide");
     jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu").toggleClass("close");
     !jquery__WEBPACK_IMPORTED_MODULE_0__(this).hasClass("close") ? $sideMenu.animate({
       right: "-300px"

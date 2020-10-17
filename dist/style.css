@@ -14016,6 +14016,10 @@ body {
   top: 80px;
 }
 
+.global__scroll__hide {
+  overflow: hidden;
+}
+
 ul#menu-primary-menu {
   margin-bottom: 0;
   position: relative;
@@ -14049,7 +14053,6 @@ ul#menu-primary-menu {
 
 .hero__slider__container {
   max-height: 100vh;
-  min-height: 70vh;
   overflow: hidden;
 }
 .hero__slider__container h1 {
@@ -14082,8 +14085,9 @@ ul#menu-primary-menu {
 }
 
 .about__us__hero__container {
-  padding: 300px 0px;
+  padding: 250px 0px;
   width: 100%;
+  background-image: url("./../assets/images/about_company.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0;
@@ -14147,7 +14151,8 @@ ul#menu-primary-menu {
 .contact__form__container label {
   font-weight: bold;
 }
-.contact__form__container button[type=submit], .contact__form__container input[type=submit] {
+.contact__form__container button[type=submit],
+.contact__form__container input[type=submit] {
   background: #ed008c;
 }
 .contact__form__container input.form-control,
@@ -14208,6 +14213,14 @@ ul#menu-primary-menu {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(237 0 140)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
+.solutions__container a {
+  display: inline-block;
+  transition: all 0.3s;
+}
+.solutions__container a:hover {
+  box-shadow: 0px 4px 7px 4px #0000004d;
+}
+
 .sub__hero__container {
   background-image: url(./../assets/images/bg_742.jpg);
   padding: 200px 0px;
@@ -14222,6 +14235,8 @@ ul#menu-primary-menu {
   top: 80px;
   z-index: 1;
   background: #ed008c;
+  padding-top: 13px;
+  box-shadow: 0px 1px 5px 2px #67676717;
 }
 .sticky__menu__container ul li a {
   color: white;
@@ -14285,12 +14300,38 @@ footer .property__container .badge__container:nth-child(3) {
   .hero__slider__container .carousel-caption {
     width: 70% !important;
     transform: translate(-50%, -50%);
-    top: 60% !important;
+    top: 50% !important;
     left: 50% !important;
   }
 
   .sub__hero__container {
     padding: 100px 0px !important;
+  }
+
+  .about__us__hero__container {
+    padding: 50px 0px !important;
+  }
+  .about__us__hero__container .text__container p {
+    font-size: 14px !important;
+  }
+
+  .about__us__container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about__us__container h1 {
+    font-size: 27px;
+  }
+  .about__us__container p {
+    font-size: 14px;
+  }
+  .about__us__container .img__container {
+    width: 250px !important;
+  }
+
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (max-width: 991px) {
@@ -14323,6 +14364,8 @@ footer .property__container .badge__container:nth-child(3) {
     padding: 30px 30px 0;
     top: 80px;
     z-index: 10;
+    overflow-y: auto;
+    padding-bottom: 150px;
   }
   .side__menu ul {
     padding: 0;
@@ -14374,13 +14417,6 @@ footer .property__container .badge__container:nth-child(3) {
   .hero__slider__container .carousel-caption {
     width: 75%;
     transform: translate(-50%, -50%);
-    top: 60%;
-    left: 50%;
-    display: flex !important;
-    align-items: center !important;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 0;
   }
 
   .svg__container {
@@ -14400,6 +14436,10 @@ footer .property__container .badge__container:nth-child(3) {
     height: 68px;
     display: flex;
     align-items: flex-end;
+  }
+
+  .sticky__menu__container {
+    padding: 12px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {

@@ -11,10 +11,10 @@ $(document).ready(function() {
     }
   });
 
-  $(".show__side__menu").click(function() {
+  $(".show__side__menu  , .global-overlay").click(function() {
     let $sideMenu = $(".side__menu");
 
-    $("body").toggleClass("show-global-overlay");
+    $("body").toggleClass("show-global-overlay global__scroll__hide");
     $(".show__side__menu").toggleClass("close");
 
     !$(this).hasClass("close")
