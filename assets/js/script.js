@@ -21,4 +21,8 @@ $(document).ready(function() {
       ? $sideMenu.animate({ right: "-300px" }, "slow")
       : $sideMenu.animate({ right: "0" }, "slow");
   });
+
+  $("#menu-primary-menu>li>.sub-menu").addClass(
+    "animate__animated animate__fadeIn"
+  );
 });

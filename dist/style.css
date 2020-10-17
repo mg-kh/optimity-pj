@@ -14504,47 +14504,45 @@ footer .property__container .badge__container:nth-child(3) {
   .navigation__bar ul#menu-primary-menu li.menu-item-has-children > a:hover:after {
     transform: rotate(180deg);
   }
-  .navigation__bar ul#menu-primary-menu li.menu-item-has-children ul.sub-menu {
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu {
     padding: 0;
     display: none;
-    align-items: stretch;
-    flex-wrap: wrap;
     position: absolute;
     top: 100%;
     left: 0%;
     width: 100%;
-    background-color: #f8f9fa;
     box-shadow: 0px 6px 5px 3px #00000026;
   }
-  .navigation__bar ul#menu-primary-menu li.menu-item-has-children ul.sub-menu li {
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li {
     background-color: #f8f9fa;
-    display: flex;
-    align-items: center;
-    flex-basis: 50%;
     width: 100%;
     height: unset;
     margin: 0;
   }
-  .navigation__bar ul#menu-primary-menu li.menu-item-has-children ul.sub-menu li.active a {
-    color: #fff;
-    background-color: #ed008c;
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li a {
+    font-weight: bold;
+  }
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li a::after {
+    display: none;
+  }
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li > .sub-menu {
+    position: relative;
+    display: block !important;
+    box-shadow: none;
+    top: 0;
+  }
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li > .sub-menu a {
     font-weight: normal;
   }
-  .navigation__bar ul#menu-primary-menu li.menu-item-has-children ul.sub-menu li:hover {
-    background-color: #ed008c;
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li.active a {
+    color: #ed008c;
+    font-weight: normal;
   }
-  .navigation__bar ul#menu-primary-menu li.menu-item-has-children ul.sub-menu li:hover a {
-    color: #fff;
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li:hover > a {
+    color: #ed008c;
   }
-  .navigation__bar ul#menu-primary-menu li.menu-item-has-children ul.sub-menu li a {
-    line-height: unset;
-    height: unset;
-    transition: all 0.3s;
-    color: #000;
-    padding: 0;
-    display: block;
-    padding: 15px;
-    width: 100%;
+  .navigation__bar ul#menu-primary-menu li.menu-item-has-children > ul.sub-menu li:hover > a::after {
+    display: none !important;
   }
   .navigation__bar ul#menu-primary-menu li.menu-item-has-children:hover ul {
     display: flex;
