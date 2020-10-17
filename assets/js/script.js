@@ -8,6 +8,8 @@ $(document).ready(function() {
       $("body").removeClass("show-global-overlay");
       $(".show__side__menu").removeClass("close");
       $(".side__menu").css("right", "-300px");
+
+      $("body").removeClass("global__scroll__hide");
     }
   });
 

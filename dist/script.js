@@ -108,6 +108,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0__(document).ready(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0__("body").removeClass("show-global-overlay");
       jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu").removeClass("close");
       jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu").css("right", "-300px");
+      jquery__WEBPACK_IMPORTED_MODULE_0__("body").removeClass("global__scroll__hide");
     }
   });
   jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu  , .global-overlay").click(function () {
