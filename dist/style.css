@@ -14255,6 +14255,17 @@ ul#menu-primary-menu {
   color: #6d37a9;
 }
 
+.diamond__banner__container .breadcrumb .breadcrumb-item.active {
+  color: #cecece !important;
+}
+
+.our__customer__container .card {
+  transition: all 0.3s;
+}
+.our__customer__container .card:hover {
+  box-shadow: 0px 1px 5px 2px #67676717;
+}
+
 footer {
   padding: 50px 0px;
 }
