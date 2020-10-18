@@ -54,6 +54,10 @@ body {
   top: $nav_height;
 }
 
+.global__scroll__hide {
+  overflow: hidden;
+}
+
 ul#menu-primary-menu {
   margin-bottom: 0;
   position: relative;

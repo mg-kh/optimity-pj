@@ -31,7 +31,7 @@
 
 .hero__slider__container {
   max-height: 100vh;
-  min-height: 70vh;
+  // min-height: 70vh;
   overflow: hidden;
 
   h1 {
@@ -70,8 +70,9 @@
 }
 
 .about__us__hero__container {
-  padding: 300px 0px;
+  padding: 250px 0px;
   width: 100%;
+  background-image: url("./../assets/images/about_company.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0;
@@ -145,7 +146,8 @@
     font-weight: bold;
   }
 
-  button[type="submit"], input[type="submit"] {
+  button[type="submit"],
+  input[type="submit"] {
     background: $pinky;
   }
 
@@ -230,6 +232,16 @@
   }
 }
 
+.solutions__container {
+  a {
+    display: inline-block;
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 4px 7px 4px #0000004d;
+    }
+  }
+}
+
 .sub__hero__container {
   background-image: url(./../assets/images/bg_742.jpg);
   padding: 200px 0px;
@@ -240,9 +252,11 @@
 
 .sticky__menu__container {
   position: sticky;
-  top: 80px;
+  top: $nav_height;
   z-index: 1;
   background: $pinky;
+  padding-top: 13px;
+  box-shadow: 0px 1px 5px 2px #67676717;
   ul {
     li {
       a {
@@ -263,6 +277,23 @@
           color: $violet;
         }
       }
+    }
+  }
+}
+
+.diamond__banner__container {
+  .breadcrumb {
+    .breadcrumb-item.active {
+      color: rgb(206, 206, 206) !important;
+    }
+  }
+}
+
+.our__customer__container {
+  .card {
+    transition: all 0.3s;
+    &:hover {
+      box-shadow: 0px 1px 5px 2px #67676717;
     }
   }
 }

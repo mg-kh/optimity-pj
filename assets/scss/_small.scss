@@ -33,12 +33,41 @@
     .carousel-caption {
       width: 70% !important;
       transform: translate(-50%, -50%);
-      top: 60% !important;
+      top: 50% !important;
       left: 50% !important;
     }
   }
 
   .sub__hero__container {
-    padding: 100px 0px!important;
+    padding: 100px 0px !important;
+  }
+
+  .about__us__hero__container {
+    padding: 50px 0px !important;
+    .text__container {
+      p {
+        font-size: 14px !important;
+      }
+    }
+  }
+
+  .about__us__container {
+    padding-left: 20px;
+    padding-right: 20px;
+    h1 {
+      font-size: 27px;
+    }
+    p {
+      font-size: 14px;
+    }
+
+    .img__container {
+      width: 250px !important;
+    }
+  }
+
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

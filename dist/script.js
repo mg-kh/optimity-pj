@@ -103,23 +103,25 @@ __webpack_require__.r(__webpack_exports__);
 
 jquery__WEBPACK_IMPORTED_MODULE_0__(document).ready(function () {
   // menu show hide based on dynamically changing screen size
-  jquery__WEBPACK_IMPORTED_MODULE_0__(window).on('resize', function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0__(window).on("resize", function () {
     if (jquery__WEBPACK_IMPORTED_MODULE_0__(this).innerWidth() > 991) {
-      jquery__WEBPACK_IMPORTED_MODULE_0__('body').removeClass('show-global-overlay');
-      jquery__WEBPACK_IMPORTED_MODULE_0__('.show__side__menu').removeClass('close');
-      jquery__WEBPACK_IMPORTED_MODULE_0__('.side__menu').css("right", "-300px");
+      jquery__WEBPACK_IMPORTED_MODULE_0__("body").removeClass("show-global-overlay");
+      jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu").removeClass("close");
+      jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu").css("right", "-300px");
+      jquery__WEBPACK_IMPORTED_MODULE_0__("body").removeClass("global__scroll__hide");
     }
   });
-  jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu").click(function () {
-    var $sideMenu = jquery__WEBPACK_IMPORTED_MODULE_0__('.side__menu');
-    jquery__WEBPACK_IMPORTED_MODULE_0__('body').toggleClass('show-global-overlay');
-    jquery__WEBPACK_IMPORTED_MODULE_0__('.show__side__menu').toggleClass('close');
-    !jquery__WEBPACK_IMPORTED_MODULE_0__(this).hasClass('close') ? $sideMenu.animate({
-      "right": "-300px"
+  jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu  , .global-overlay").click(function () {
+    var $sideMenu = jquery__WEBPACK_IMPORTED_MODULE_0__(".side__menu");
+    jquery__WEBPACK_IMPORTED_MODULE_0__("body").toggleClass("show-global-overlay global__scroll__hide");
+    jquery__WEBPACK_IMPORTED_MODULE_0__(".show__side__menu").toggleClass("close");
+    !jquery__WEBPACK_IMPORTED_MODULE_0__(this).hasClass("close") ? $sideMenu.animate({
+      right: "-300px"
     }, "slow") : $sideMenu.animate({
-      "right": "0"
+      right: "0"
     }, "slow");
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0__("#menu-primary-menu>li>.sub-menu").addClass("animate__animated animate__fadeIn");
 });
 
 /***/ }),
