@@ -1,5 +1,5 @@
 <!-- Contact Banner -->
-<section class="contact__us__banner__container" style="background-image: url('/wp-content/uploads/2020/10/bgart.jpg')">
+<section class="diamond__banner__container" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?php echo esc_attr( get_parent_theme_file_uri( 'assets/images/bgart.jpg' ) ); ?>);">
   <div class="container h-100">
     <div class="row h-100 d-flex align-items-center">
       <div class="col-12">

@@ -14520,3 +14520,6 @@ footer .property__container .badge__container:nth-child(3) {
     height: 80px;
   }
 }
+.contents .content__container:not(:first-child) {
+  padding-top: 35px;
+}

@@ -1,0 +1,7 @@
+.contents {
+  .content__container {
+    &:not(:first-child) {
+      padding-top: 35px;
+    }
+  }
+}

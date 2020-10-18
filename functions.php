@@ -17,48 +17,51 @@ if ( ! defined( 'BASE_ASSET_URL' ) ) {
  * Enqueue styles
  */
 
-function optimity_styles() {
+function theme_styles() {
     wp_enqueue_style( 'style', get_template_directory_uri() . BASE_ASSET_URL . '/style.css', array(), THEME_VERSION, 'all' );
 }
-add_action( 'wp_enqueue_scripts', 'optimity_styles' );
+add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
 /**
  * Enqueue scripts
  */
-function optimity_scripts() {
+function theme_scripts() {
     // wp_deregister_script('jquery');
 
     wp_enqueue_script( 'script', get_template_directory_uri() . BASE_ASSET_URL . '/script.js', array(), THEME_VERSION, true );
 }
-add_action( 'wp_enqueue_scripts', 'optimity_scripts' );
+add_action( 'wp_enqueue_scripts', 'theme_scripts' );
 
 /**
  * Essential theme supports
  */
+function  theme_setup() {
+  /**
+   * Let WordPress manage the document title.
+   */
+  add_theme_support( 'title-tag' );
 
-if ( ! function_exists( 'optimity_setup' ) ) {
-    function  optimity_setup() {
-        /** Navigation menu locations */
-        register_nav_menus(
-            array(
-                'primary_menu' => 'Primary Menu'        
-            )
-        );
 
-        /**
-         * Let WordPress manage the document title.
-         */
-        add_theme_support( 'title-tag' );
+  /**
+   * Navigation menu locations 
+   */        
+  register_nav_menus(
+    array(
+      'primary_menu' => 'Primary Menu'        
+    )
+  );
 
-        /**
-         * Add support for core custom logo.
-         * 
-         * @link https://codex.wordpress.org/Theme_Logo
-         */
-        add_theme_support( 'custom-logo' );
-    }
+  /**
+   * Add support for core custom logo.
+   */
+  add_theme_support( 'custom-logo' );
+
+  /**
+   * Enable support for Post Thumbnails on posts and pages.
+   */
+  // add_theme_support( 'post-thumbnails' );
 }
-add_action( 'after_setup_theme', 'optimity_setup' );
+add_action( 'after_setup_theme', 'theme_setup' );
 
 /** add ".active" class to active menu item */
 function special_nav_class($classes, $item) {
@@ -68,9 +71,3 @@ function special_nav_class($classes, $item) {
     return $classes;
 }
 add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 2 );
-
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-// require get_template_directory() . '/inc/template-functions.php';
